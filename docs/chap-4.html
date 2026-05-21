@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Chap-4</title>
+
+    <link rel="stylesheet" href="https://athiraraghu.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://athiraraghu.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://athiraraghu.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://athiraraghu.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://athiraraghu.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://athiraraghu.github.io/pynotes">My Python Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://athiraraghu.github.io/pynotes/chap-4.html" rel="bookmark"
+        title="Permalink to Chap-4">Chap-4</a></h3>
+    </header>
+
+<h6 class="subheader" title="2026-05-19T00:00:00+05:30">Tue 19 May 2026
+</h6>
+
+
+    <div class="highlight"><pre><span></span><code><span class="n">total</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">num</span> <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">101</span><span class="p">)</span> <span class="k">if</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The sum of all even numbers from 1 to 100 is: </span><span class="si">{</span><span class="n">total</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>The sum of all even numbers from 1 to 100 is: 2550
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">num1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the first number (dividend): &quot;</span><span class="p">))</span>
+<span class="n">num2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the second number (divisor): &quot;</span><span class="p">))</span>
+<span class="n">quot</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">//</span> <span class="n">num2</span>
+<span class="n">rem</span> <span class="o">=</span> <span class="n">num1</span> <span class="o">%</span> <span class="n">num2</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Quotient: </span><span class="si">{</span><span class="n">quot</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Remainder: </span><span class="si">{</span><span class="n">rem</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Enter the first number (dividend):  34
+Enter the second number (divisor):  4
+
+
+Quotient: 8
+Remainder: 2
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">cel</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter temperature in Celsius: &quot;</span><span class="p">))</span>
+<span class="n">fah</span> <span class="o">=</span> <span class="nb">float</span><span class="p">((</span><span class="n">cel</span> <span class="o">*</span> <span class="mi">9</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="mi">32</span><span class="p">)</span>
+<span class="n">kel</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">cel</span> <span class="o">+</span> <span class="mf">273.15</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Fahrenheit: </span><span class="si">{</span><span class="n">fah</span><span class="si">:}</span><span class="s2">F&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Kelvin: </span><span class="si">{</span><span class="n">kel</span><span class="si">:}</span><span class="s2">K&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Enter temperature in Celsius:  98
+
+
+Fahrenheit: 208.4F
+Kelvin: 371.15K
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
+<span class="n">num1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the first number: &quot;</span><span class="p">))</span>
+<span class="n">num2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the second number: &quot;</span><span class="p">))</span>
+<span class="n">gcd</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">gcd</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">)</span>
+<span class="n">lcm</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">num1</span> <span class="o">*</span> <span class="n">num2</span><span class="p">)</span> <span class="o">//</span> <span class="n">gcd</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;GCD of </span><span class="si">{</span><span class="n">num1</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="n">num2</span><span class="si">}</span><span class="s2"> is: </span><span class="si">{</span><span class="n">gcd</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;LCM of </span><span class="si">{</span><span class="n">num1</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="n">num2</span><span class="si">}</span><span class="s2"> is: </span><span class="si">{</span><span class="n">lcm</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Enter the first number:  67
+Enter the second number:  54
+
+
+GCD of 67 and 54 is: 1
+LCM of 67 and 54 is: 3618
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p>
+<p class="subheader">Category: <a href="https://athiraraghu.github.io/pynotes/category/python-notes.html">python-notes</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://athiraraghu.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://athiraraghu.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://athiraraghu.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://athiraraghu.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://athiraraghu.github.io/pynotes/category/python-notes.html">python-notes</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/athiraraghu/">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/athiraraghu14/">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>My Python Notes by Athira</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>

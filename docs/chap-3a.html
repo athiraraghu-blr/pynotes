@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Chap-3(A)</title>
+
+    <link rel="stylesheet" href="https://athiraraghu.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://athiraraghu.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://athiraraghu.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://athiraraghu.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://athiraraghu.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://athiraraghu.github.io/pynotes">My Python Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://athiraraghu.github.io/pynotes/chap-3a.html" rel="bookmark"
+        title="Permalink to Chap-3(A)">Chap-3(A)</a></h3>
+    </header>
+
+<h6 class="subheader" title="2026-05-19T00:00:00+05:30">Tue 19 May 2026
+</h6>
+
+
+    <div class="highlight"><pre><span></span><code><span class="n">num</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;negative&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;positive&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;zero&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>zero
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="k">if</span><span class="p">(</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">13</span> <span class="o">&lt;</span> <span class="mi">19</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;teenager&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;not a teenager&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>teenager
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">num1</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">num2</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="k">if</span><span class="p">(</span><span class="n">num1</span><span class="o">&gt;</span><span class="n">num2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;greater&quot;</span><span class="p">)</span>
+<span class="k">elif</span><span class="p">(</span><span class="n">num1</span><span class="o">&lt;</span><span class="n">num2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;lesser&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;equal&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>equal
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">score</span> <span class="o">=</span> <span class="mi">45</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">50</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pass&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fail&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Fail
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">time</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the time (0-23): &quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="mi">5</span> <span class="o">&lt;=</span> <span class="n">time</span> <span class="o">&lt;</span> <span class="mi">12</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Morning&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="mi">12</span> <span class="o">&lt;=</span> <span class="n">time</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Afternoon&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="p">(</span><span class="mi">18</span> <span class="o">&lt;=</span> <span class="n">time</span> <span class="o">&lt;=</span> <span class="mi">23</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">time</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Evening&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid hour!&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Enter the time (0-23):  25
+
+
+Invalid hour!
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 5</strong></p>
+<p class="subheader">Category: <a href="https://athiraraghu.github.io/pynotes/category/python-notes.html">python-notes</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://athiraraghu.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://athiraraghu.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://athiraraghu.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://athiraraghu.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://athiraraghu.github.io/pynotes/category/python-notes.html">python-notes</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/athiraraghu/">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/athiraraghu14/">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>My Python Notes by Athira</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>
