@@ -28,7 +28,7 @@ FOLDER_NAME = os.path.basename(repo.working_dir)
 # Check if the 'local' argument is provided
 if os.getenv("PELICAN_ENV") == "local":
     # Local settings
-    SITEURL         = ''
+    SITEURL         = 'https://athiraraghu-blr.github.io/pynotes/'
     RELATIVE_URLS   = True
     print("Running Pelican in LOCAL mode")
 else:

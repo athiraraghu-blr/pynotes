@@ -1,6 +1,6 @@
 ---
 title: Chap-2(B)
-date: 2026-05-19
+date: 2026-05-21
 author: Your Name
 cell_count: 6
 score: 5

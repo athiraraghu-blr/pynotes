@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Chap-5</title>
+
+    <link rel="stylesheet" href="https://athiraraghu.github.io/pynotes/theme/css/normalize.css" />
+    <link rel="stylesheet" href="https://athiraraghu.github.io/pynotes/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="https://athiraraghu.github.io/pynotes/theme/css/style.css" />
+    <link rel="stylesheet" href="https://athiraraghu.github.io/pynotes/theme/css/pygments.css" />	
+    <script src="https://athiraraghu.github.io/pynotes/theme/js/modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="https://athiraraghu.github.io/pynotes">My Python Notes</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+<article>
+    <header>
+        <h3 class="article-title"><a href="https://athiraraghu.github.io/pynotes/chap-5.html" rel="bookmark"
+        title="Permalink to Chap-5">Chap-5</a></h3>
+    </header>
+
+<h6 class="subheader" title="2026-05-21T00:00:00+05:30">Thu 21 May 2026
+</h6>
+
+
+    <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">greet</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, Python!&quot;</span><span class="p">)</span>
+<span class="n">greet</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Hello, Python!
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">square</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">user_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a number: &quot;</span><span class="p">)</span>
+<span class="n">converted_number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">user_input</span><span class="p">)</span>
+<span class="n">square</span><span class="p">(</span><span class="n">converted_number</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Enter a number:  45
+
+
+2025
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>  
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">13</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">greet_user</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Guest&quot;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+<span class="n">greet_user</span><span class="p">()</span>
+<span class="n">greet_user</span><span class="p">(</span><span class="s2">&quot;Alex&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Hello, Guest!
+Hello, Alex!
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">student_info</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Student Name: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Student Age: </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">student_info</span><span class="p">(</span><span class="n">age</span><span class="o">=</span><span class="mi">21</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Sam&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Student Name: Sam
+Student Age: 21
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">sum_numbers</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_numbers</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_numbers</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_numbers</span><span class="p">(</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">0</span>
+<span class="mf">30</span>
+<span class="mf">5.0</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">display_profile</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">display_profile</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Jordan&quot;</span><span class="p">,</span> <span class="n">role</span><span class="o">=</span><span class="s2">&quot;Developer&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;Boston&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">name</span><span class="o">:</span><span class="w"> </span><span class="n">Jordan</span>
+<span class="n">role</span><span class="o">:</span><span class="w"> </span><span class="n">Developer</span>
+<span class="n">location</span><span class="o">:</span><span class="w"> </span><span class="n">Boston</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">complete_profile</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Positional arguments:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;- </span><span class="si">{</span><span class="n">item</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Keyword arguments:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;- </span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">complete_profile</span><span class="p">(</span>
+    <span class="s2">&quot;Photography&quot;</span><span class="p">,</span> <span class="s2">&quot;Hiking&quot;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Taylor&quot;</span><span class="p">,</span> <span class="n">age</span><span class="o">=</span><span class="mi">28</span><span class="p">,</span> <span class="n">city</span><span class="o">=</span><span class="s2">&quot;Seattle&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Positional arguments:
+- Photography
+- Hiking
+
+Keyword arguments:
+- name: Taylor
+- age: 28
+- city: Seattle
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">cube</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cube</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cube</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">27</span>
+<span class="mf">125</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">cube</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cube</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cube</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">27</span>
+<span class="mf">125</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>  
+<span class="k">def</span> <span class="nf">local_scope_demo</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>  
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Inside function (local): </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">local_scope_demo</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Outside function (global): </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Inside function (local): 10
+Outside function (global): 100
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>  
+<span class="k">def</span> <span class="nf">increment_counter</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">counter</span>  
+    <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="n">increment_counter</span><span class="p">()</span>
+<span class="n">increment_counter</span><span class="p">()</span>
+<span class="n">increment_counter</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Final counter value: </span><span class="si">{</span><span class="n">counter</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Final counter value: 3
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">outer_function</span><span class="p">():</span>
+    <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Hello from the enclosing scope!&quot;</span>  
+    <span class="k">def</span> <span class="nf">inner_function</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+    <span class="n">inner_function</span><span class="p">()</span>
+<span class="n">outer_function</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Hello from the enclosing scope!
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">outer_function</span><span class="p">():</span>
+    <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span> 
+    <span class="k">def</span> <span class="nf">inner_function</span><span class="p">():</span>
+        <span class="k">nonlocal</span> <span class="n">counter</span>  
+        <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Current count: </span><span class="si">{</span><span class="n">counter</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">inner_function</span><span class="p">()</span>
+    <span class="n">inner_function</span><span class="p">()</span>
+<span class="n">outer_function</span><span class="p">()</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Current count: 1
+Current count: 2
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">built_in_example</span> <span class="o">=</span> <span class="nb">len</span>
+<span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;Global Scope&quot;</span>
+<span class="k">def</span> <span class="nf">outer_function</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;Enclosing Scope&quot;</span>
+    <span class="k">def</span> <span class="nf">inner_function</span><span class="p">():</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;Local Scope&quot;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;1. Inside inner_function (looks at Local): </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">&quot;4. Inside inner_function (using Built-in len): Length of Local is </span><span class="si">{</span><span class="n">built_in_example</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">)</span>
+    <span class="n">inner_function</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;2. Inside outer_function (looks at Enclosing): </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">outer_function</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;3. Outside all functions (looks at Global): </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">1.</span><span class="w"> </span><span class="n">Inside</span><span class="w"> </span><span class="n">inner_function</span><span class="w"> </span><span class="p">(</span><span class="n">looks</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">Local</span><span class="p">):</span><span class="w"> </span><span class="n">Local</span><span class="w"> </span><span class="n">Scope</span>
+<span class="mf">4.</span><span class="w"> </span><span class="n">Inside</span><span class="w"> </span><span class="n">inner_function</span><span class="w"> </span><span class="p">(</span><span class="n">using</span><span class="w"> </span><span class="n">Built</span><span class="o">-</span><span class="n">in</span><span class="w"> </span><span class="nb">len</span><span class="p">):</span><span class="w"> </span><span class="nb">Len</span><span class="n">gth</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">Local</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="mf">11</span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">Inside</span><span class="w"> </span><span class="n">outer_function</span><span class="w"> </span><span class="p">(</span><span class="n">looks</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">Enclosing</span><span class="p">):</span><span class="w"> </span><span class="n">Enclosing</span><span class="w"> </span><span class="n">Scope</span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">Outside</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">functions</span><span class="w"> </span><span class="p">(</span><span class="n">looks</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">Global</span><span class="p">):</span><span class="w"> </span><span class="n">Global</span><span class="w"> </span><span class="n">Scope</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;0! = </span><span class="si">{</span><span class="n">factorial</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;1! = </span><span class="si">{</span><span class="n">factorial</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;5! = </span><span class="si">{</span><span class="n">factorial</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;7! = </span><span class="si">{</span><span class="n">factorial</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="mf">0</span><span class="err">!</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span>
+<span class="mf">1</span><span class="err">!</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span>
+<span class="mf">5</span><span class="err">!</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">120</span>
+<span class="mf">7</span><span class="err">!</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5040</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;n = </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">fibonacci</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>n = 0: 0
+n = 1: 1
+n = 2: 1
+n = 3: 2
+n = 4: 3
+n = 5: 5
+n = 6: 8
+n = 7: 13
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">sum_n</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">+</span> <span class="n">sum_n</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">recursive_result</span> <span class="o">=</span> <span class="n">sum_n</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">formula_result</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Recursive sum_n(</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2">): </span><span class="si">{</span><span class="n">recursive_result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Formula result (</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2">*(</span><span class="si">{</span><span class="n">n</span><span class="si">}</span><span class="s2">+1)/2): </span><span class="si">{</span><span class="n">formula_result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Match verified: </span><span class="si">{</span><span class="n">recursive_result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">formula_result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Recursive sum_n(10): 55
+Formula result (10*(10+1)/2): 55
+Match verified: True
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">reverse_string</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">s</span>
+    <span class="k">return</span> <span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">reverse_string</span><span class="p">(</span><span class="n">s</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Original: &#39;Python&#39;      -&gt; Reversed: &#39;</span><span class="si">{</span><span class="n">reverse_string</span><span class="p">(</span><span class="s1">&#39;Python&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Original: &#39;Hello World&#39; -&gt; Reversed: &#39;</span><span class="si">{</span><span class="n">reverse_string</span><span class="p">(</span><span class="s1">&#39;Hello World&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="n">Original</span><span class="o">:</span><span class="w"> </span><span class="s">&#39;Python&#39;</span><span class="w">      </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Reversed</span><span class="o">:</span><span class="w"> </span><span class="s">&#39;nohtyP&#39;</span>
+<span class="n">Original</span><span class="o">:</span><span class="w"> </span><span class="s">&#39;Hello World&#39;</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">Reversed</span><span class="o">:</span><span class="w"> </span><span class="s">&#39;dlroW olleH&#39;</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">lru_cache</span>
+<span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nd">@lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">fibonacci_cached</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">0</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">fibonacci_cached</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci_cached</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">n_value</span> <span class="o">=</span> <span class="mi">35</span>
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+<span class="n">result_un_cached</span> <span class="o">=</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n_value</span><span class="p">)</span>
+<span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+<span class="n">time_un_cached</span> <span class="o">=</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span>
+<span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+<span class="n">result_cached</span> <span class="o">=</span> <span class="n">fibonacci_cached</span><span class="p">(</span><span class="n">n_value</span><span class="p">)</span>
+<span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+<span class="n">time_cached</span> <span class="o">=</span> <span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Without memoization: Result = </span><span class="si">{</span><span class="n">result_un_cached</span><span class="si">}</span><span class="s2">, Time = </span><span class="si">{</span><span class="n">time_un_cached</span><span class="si">:</span><span class="s2">.5f</span><span class="si">}</span><span class="s2"> seconds&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;With memoization:    Result = </span><span class="si">{</span><span class="n">result_cached</span><span class="si">}</span><span class="s2">, Time = </span><span class="si">{</span><span class="n">time_cached</span><span class="si">:</span><span class="s2">.5f</span><span class="si">}</span><span class="s2"> seconds&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Speedup factor:      </span><span class="si">{</span><span class="n">time_un_cached</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">time_cached</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">x faster&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Without memoization: Result = 9227465, Time = 8.48784 seconds
+With memoization:    Result = 9227465, Time = 0.00052 seconds
+Speedup factor:      16216.7x faster
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">math</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Square root of 144: </span><span class="si">{</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">144</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Value of pi: </span><span class="si">{</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ceiling of 4.3: </span><span class="si">{</span><span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="mf">4.3</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Square root of 144: 12.0
+Value of pi: 3.141592653589793
+Ceiling of 4.3: 5
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">factorial</span><span class="p">,</span> <span class="n">gcd</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Factorial of 6: </span><span class="si">{</span><span class="n">factorial</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;GCD of 48 and 18: </span><span class="si">{</span><span class="n">gcd</span><span class="p">(</span><span class="mi">48</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>Factorial of 6: 720
+GCD of 48 and 18: 6
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">random</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Five random integers between 1 and 100:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">random_number</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">random_number</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code><span class="nv">Five</span><span class="w"> </span><span class="k">random</span><span class="w"> </span><span class="nv">integers</span><span class="w"> </span><span class="nv">between</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="mi">100</span>:
+<span class="mi">83</span>
+<span class="mi">53</span>
+<span class="mi">67</span>
+<span class="mi">89</span>
+<span class="mi">79</span>
+</code></pre></div>
+
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+<hr>
+<p><strong>Score: 20</strong></p>
+<p class="subheader">Category: <a href="https://athiraraghu.github.io/pynotes/category/python-notes.html">python-notes</a>
+
+</p>
+
+
+
+
+</article>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="https://athiraraghu.github.io/pynotes/archives.html">Archives</a>
+            <li><a href="https://athiraraghu.github.io/pynotes/tags.html">Tags</a>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="https://athiraraghu.github.io/pynotes/category/basics.html">basics</a></li>
+            <li><a href="https://athiraraghu.github.io/pynotes/category/pandas-work.html">pandas-work</a></li>
+            <li><a href="https://athiraraghu.github.io/pynotes/category/python-notes.html">python-notes</a></li>
+   
+        </ul>
+
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="https://github.com/athiraraghu/">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/athiraraghu14/">LinkedIn</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>My Python Notes by Athira</p> -->
+            </div>
+            </div>
+    </div>
+</footer>
+</body>
+</html>
