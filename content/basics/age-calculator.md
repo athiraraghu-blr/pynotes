@@ -1,9 +1,10 @@
 ---
 title: Age-Calculator
-date: 2026-05-21
+date: 2026-06-22
 author: Your Name
 cell_count: 5
 score: 5
+summary: Basics — age calculator notebook with Python examples and exercises.
 ---
 
 ```python

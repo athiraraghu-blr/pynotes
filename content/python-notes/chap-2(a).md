@@ -1,9 +1,10 @@
 ---
 title: Chap-2(A)
-date: 2026-05-21
+date: 2026-06-22
 author: Your Name
 cell_count: 11
 score: 10
+summary: Python Notes — chap 2(a) notebook with Python examples and exercises.
 ---
 
 ```python

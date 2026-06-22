@@ -100,7 +100,7 @@ def convert_notebooks_to_markdown(notebook_dir, output_dir, fresh = False):
         # Add metadata to the generated Markdown file
         # Add metadata and cell count to the Markdown file
 
-        add_metadata_to_markdown(new_md_file, cell_count, score)
+        add_metadata_to_markdown(new_md_file, cell_count, score, notebook_path=notebook)
 
         # Update image references in Markdown
         update_image_references(new_md_file)
@@ -144,8 +144,39 @@ def count_cells_in_notebook(notebook_path):
     # Count the cells in the notebook
     return len(notebook_data.get("cells", []))
 
+def generate_summary(notebook_path: Path) -> str:
+    """
+    Auto-generate a human-readable summary for the index page based on the
+    notebook's folder category and filename.
+    Uses the first markdown cell's text if available, otherwise falls back to
+    a description built from the folder name and file stem.
+    """
+    try:
+        with open(notebook_path, "r", encoding="utf-8") as f:
+            nb = json.load(f)
+
+        # Try to find the first markdown cell with real text
+        for cell in nb.get("cells", []):
+            if cell.get("cell_type") == "markdown":
+                src = "".join(cell.get("source", [])).strip()
+                # Strip markdown heading markers and clean up
+                src = src.lstrip("#").strip()
+                if src:
+                    # Take just the first line, max 160 chars
+                    first_line = src.splitlines()[0].strip()
+                    if len(first_line) > 20:  # meaningful text, not just a symbol
+                        return first_line[:160]
+    except Exception:
+        pass
+
+    # Fallback: build a description from folder + filename
+    category = notebook_path.parent.name.replace("-", " ").replace("_", " ").title()
+    name = notebook_path.stem.replace("-", " ").replace("_", " ")
+    return f"{category} — {name} notebook with Python examples and exercises."
+
+
 # Step 2: Add metadata to Markdown
-def add_metadata_to_markdown(markdown_file, cell_count, score):
+def add_metadata_to_markdown(markdown_file, cell_count, score, notebook_path=None):
     """
     Add metadata and the cell count to the .md file.
     """
@@ -158,12 +189,18 @@ def add_metadata_to_markdown(markdown_file, cell_count, score):
     file_mtime = datetime.fromtimestamp(Path(markdown_file).stat().st_mtime)
     formatted_date = file_mtime.strftime("%Y-%m-%d")
 
+    # Generate summary from the original notebook if available
+    summary = ""
+    if notebook_path:
+        summary = generate_summary(notebook_path)
+
     metadata = f"""---
 title: {markdown_file.stem.replace('_', ' ').title()}
 date: {formatted_date}
 author: Your Name
 cell_count: {cell_count}
 score: {score}
+summary: {summary}
 ---
 """
 

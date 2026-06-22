@@ -1,9 +1,10 @@
 ---
 title: Add-A-New-Column
-date: 2026-05-21
+date: 2026-06-22
 author: Your Name
 cell_count: 10
 score: 10
+summary: Pandas Work — add a new column notebook with Python examples and exercises.
 ---
 
 Add a New Column

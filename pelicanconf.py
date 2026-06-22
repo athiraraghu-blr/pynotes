@@ -51,9 +51,12 @@ AUTHOR_FEED_RSS             = None
 
 DEFAULT_PAGINATION          = 10
 
+SUMMARY_MAX_LENGTH          = 50  # words — keeps index clean
+
 # Uncomment following line if you want document-relative URLs when developing
 # Use SITEURL for absolute paths; RELATIVE_URLS is typically for local preview
-RELATIVE_URLS = False
+# NOTE: relative URLs work for both local preview and GitHub Pages gh-pages layout
+RELATIVE_URLS = True
 
 # Ensure unique output paths
 ARTICLE_URL = '{slug}.html'

@@ -1,9 +1,10 @@
 ---
 title: Chap-3(D)
-date: 2026-05-21
+date: 2026-06-22
 author: Your Name
 cell_count: 3
 score: 0
+summary: Python Notes — chap 3(d) notebook with Python examples and exercises.
 ---
 
 ```python
